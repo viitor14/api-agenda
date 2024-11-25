@@ -12,7 +12,7 @@ var _userRoutes = require('./routes/userRoutes'); var _userRoutes2 = _interopReq
 var _tokenRoutes = require('./routes/tokenRoutes'); var _tokenRoutes2 = _interopRequireDefault(_tokenRoutes);
 var _alunoRoutes = require('./routes/alunoRoutes'); var _alunoRoutes2 = _interopRequireDefault(_alunoRoutes);
 
-const whiteList = ['http://localhost:3000', 'http://192.168.1.10:81', 'http://localhost:3001'];
+const whiteList = ['http://localhost:3000', 'api-agenda-lime.vercel.app', 'http://localhost:3001'];
 
 const corsOptions = {
   origin(origin, callback) {
