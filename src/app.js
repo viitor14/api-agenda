@@ -12,7 +12,7 @@ import userRoutes from './routes/userRoutes';
 import tokenRoutes from './routes/tokenRoutes';
 import alunoRoutes from './routes/alunoRoutes';
 
-const whiteList = ['http://localhost:3000', 'api-agenda-lime.vercel.app', 'http://localhost:3001'];
+const whiteList = ['0.0.0.0'];
 
 const corsOptions = {
   origin(origin, callback) {
