@@ -12,7 +12,7 @@ import userRoutes from './routes/userRoutes';
 import tokenRoutes from './routes/tokenRoutes';
 import alunoRoutes from './routes/alunoRoutes';
 
-const whiteList = ['0.0.0.0'];
+const whiteList = ['http://localhost:3000'];
 
 const corsOptions = {
   origin(origin, callback) {
