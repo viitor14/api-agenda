@@ -12,7 +12,7 @@ import userRoutes from './routes/userRoutes';
 import tokenRoutes from './routes/tokenRoutes';
 import alunoRoutes from './routes/alunoRoutes';
 
-const whiteList = ['http://localhost:3000'];
+const whiteList = ['http://localhost:3000', 'https://agenda-one-psi.vercel.app'];
 
 const corsOptions = {
   origin(origin, callback) {
