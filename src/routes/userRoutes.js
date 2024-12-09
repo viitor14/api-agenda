@@ -10,6 +10,7 @@ const router = new Router();
 // router.get('/:id', userController.show); // Lista um usuario
 
 router.post('/', userController.store);
+router.get('/', loginRequired, userController.show); // Lista um usuario
 router.put('/', loginRequired, userController.update);
 router.delete('/', loginRequired, userController.delete);
 
