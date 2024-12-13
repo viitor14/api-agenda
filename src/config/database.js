@@ -1,15 +1,17 @@
 require('dotenv').config();
 
 module.exports = {
-  username: process.env.DATABASE_USERNAME,
-  password: process.env.DATABASE_PASSWORD,
-  database: process.env.DATABASE,
-  host: process.env.DATABASE_HOST,
-  dialect: 'mysql', // Defina corretamente o dialect para MySQL ou MariaDB
-  port: process.env.DATABASE_PORT || 3306, // Caso a porta não esteja no .env, usa a padrão 3306
+  url: process.env.DATABASE_URL,
+  dialect: 'postgres', // Defina o dialect como PostgreSQL
+  dialectOptions: {
+    ssl: {
+      require: true,
+      rejectUnauthorized: false, // Permite conexões com certificados SSL genéricos
+    },
+  },
   define: {
-    timestamps: true,
-    underscored: true,
+    timestamps: true, // Ativa os campos createdAt e updatedAt
+    underscored: true, // Converte nomes para snake_case
     underscoredAll: true,
     createdAt: 'created_at',
     updatedAt: 'updated_at',
